@@ -1,3 +1,4 @@
+package edu.uiowa.chart.states;
 // Generated from StateLabel.g4 by ANTLR 4.7.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -16,8 +17,8 @@ public class StateLabelParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, ACTION_TYPE=3, ID=4, ID_LETTER=5, LINE_COMMENT=6, WS=7, 
-		AnyCharacter=8;
+		T__0=1, T__1=2, ActionType=3, Identifier=4, IdentifierLetter=5, LineComment=6, 
+		WhiteSpace=7, AnyCharacter=8;
 	public static final int
 		RULE_stateLabel = 0, RULE_actions = 1, RULE_action = 2, RULE_actionBody = 3;
 	public static final String[] ruleNames = {
@@ -28,8 +29,8 @@ public class StateLabelParser extends Parser {
 		null, "','", "':'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, null, "ACTION_TYPE", "ID", "ID_LETTER", "LINE_COMMENT", "WS", 
-		"AnyCharacter"
+		null, null, null, "ActionType", "Identifier", "IdentifierLetter", "LineComment", 
+		"WhiteSpace", "AnyCharacter"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -81,7 +82,7 @@ public class StateLabelParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class StateLabelContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(StateLabelParser.ID, 0); }
+		public TerminalNode Identifier() { return getToken(StateLabelParser.Identifier, 0); }
 		public ActionsContext actions() {
 			return getRuleContext(ActionsContext.class,0);
 		}
@@ -112,11 +113,11 @@ public class StateLabelParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(8);
-			match(ID);
+			match(Identifier);
 			setState(10);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if (_la==ACTION_TYPE) {
+			if (_la==ActionType) {
 				{
 				setState(9);
 				actions();
@@ -182,7 +183,7 @@ public class StateLabelParser extends Parser {
 				setState(15); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( _la==ACTION_TYPE );
+			} while ( _la==ActionType );
 			}
 		}
 		catch (RecognitionException re) {
@@ -198,9 +199,9 @@ public class StateLabelParser extends Parser {
 
 	public static class ActionContext extends ParserRuleContext {
 		public ActionBodyContext actionBody;
-		public List<TerminalNode> ACTION_TYPE() { return getTokens(StateLabelParser.ACTION_TYPE); }
-		public TerminalNode ACTION_TYPE(int i) {
-			return getToken(StateLabelParser.ACTION_TYPE, i);
+		public List<TerminalNode> ActionType() { return getTokens(StateLabelParser.ActionType); }
+		public TerminalNode ActionType(int i) {
+			return getToken(StateLabelParser.ActionType, i);
 		}
 		public ActionBodyContext actionBody() {
 			return getRuleContext(ActionBodyContext.class,0);
@@ -232,7 +233,7 @@ public class StateLabelParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(17);
-			match(ACTION_TYPE);
+			match(ActionType);
 			setState(22);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -242,7 +243,7 @@ public class StateLabelParser extends Parser {
 				setState(18);
 				match(T__0);
 				setState(19);
-				match(ACTION_TYPE);
+				match(ActionType);
 				}
 				}
 				setState(24);

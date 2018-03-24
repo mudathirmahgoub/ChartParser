@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bc9dd1e-f28a-491f-9864-7f9195233604" name="Default" comment="" />
+    <list default="true" id="3bc9dd1e-f28a-491f-9864-7f9195233604" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateActionParser.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ActionsVisitor.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ActionsVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/ActionsVisitor.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabel.g4" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabel.g4" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabel.interp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabel.tokens" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelBaseListener.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelBaseListener.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelBaseListener.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelBaseVisitor.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelBaseVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelBaseVisitor.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelLexer.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelLexer.interp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelLexer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelLexer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelLexer.tokens" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelListener.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelListener.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelListener.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelParser$ActionBodyContext.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelParser$ActionContext.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelParser$ActionsContext.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelParser$StateLabelContext.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelParser.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelParser.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelParser.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelVisitor.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StateLabelVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelVisitor.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/antlr-4.7.1-complete.jar" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/antlr-4.7.1-complete.jar" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/antlr.bat" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/antlr.bat" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compile.bat" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/compile.bat" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grun.bat" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/grun.bat" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test.txt" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/test.txt" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,93 +46,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StateLabelBaseVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/StateLabelBaseVisitor.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
+            <state relative-caret-position="-250">
+              <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateActionParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateActionParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionsVisitor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/ActionsVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateLabelBaseVisitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelBaseVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
               <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <file leaf-file-name="StateLabelLexer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelLexer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="15" column="64" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="15" selection-end-column="64" />
+            <state relative-caret-position="0">
+              <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestRig.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4/4.7.1/antlr4-4.7.1.jar!/org/antlr/v4/gui/TestRig.class">
+      <file leaf-file-name="StateLabelBaseListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelBaseListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="24" />
-              <folding>
-                <marker date="1521897721158" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1521897721158" expanded="false" signature="140:973" ph="..." />
-                <marker date="1521897721158" expanded="true" signature="1555:3702" ph="{...}" />
-                <marker date="1521897721158" expanded="true" signature="3764:3890" ph="{...}" />
-                <marker date="1521897721158" expanded="true" signature="3935:5957" ph="{...}" />
-                <marker date="1521897721158" expanded="true" signature="6155:8093" ph="{...}" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionsVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ActionsVisitor.java">
+      <file leaf-file-name="StateLabelListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1023">
-              <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#231#247#0" expanded="true" />
-                <element signature="e#861#862#0" expanded="true" />
-                <element signature="e#891#892#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="231">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateLabelParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="StateLabelVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/StateLabelVisitor.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-100">
-              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateLabel.g4" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/StateLabel.g4">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateLabel.tokens" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/StateLabel.tokens">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateLabel.interp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/StateLabel.interp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-297">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="363">
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -123,6 +154,9 @@
       <replace>StateLabel</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -136,9 +170,20 @@
         <option value="$PROJECT_DIR$/src/main/java/StateStruct.java" />
         <option value="$PROJECT_DIR$/src/main/java/LabelListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/StateActionListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/ActionsVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/StateLabel.g4" />
+        <option value="$PROJECT_DIR$/src/main/java/ChartParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/StateLabelParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/states/StateLabelParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateActionParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelBaseVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelBaseListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelLexer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/ActionsVisitor.java" />
       </list>
     </option>
   </component>
@@ -203,33 +248,11 @@
             </path>
             <path>
               <item name="ChartParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="ChartParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.antlr:antlr4:4.7.1" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="ChartParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.antlr:antlr4:4.7.1" type="70bed36:NamedLibraryElementNode" />
-              <item name="antlr4-4.7.1.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChartParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.antlr:antlr4:4.7.1" type="70bed36:NamedLibraryElementNode" />
-              <item name="antlr4-4.7.1.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="v4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChartParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.antlr:antlr4:4.7.1" type="70bed36:NamedLibraryElementNode" />
-              <item name="antlr4-4.7.1.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="v4" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="ChartParser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="states" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -246,6 +269,9 @@
     <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\temp\matlab\ChartParser\src\main\java\edu\uiowa\chart\states" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\temp\matlab\ChartParser\src\main\java" />
     </key>
@@ -377,12 +403,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521898271081</updated>
-      <workItem from="1521898273386" duration="10538000" />
+      <workItem from="1521898273386" duration="12113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10538000" />
+    <option name="totallyTimeSpent" value="12113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -396,7 +422,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -456,14 +482,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ActionsVisitor.java</url>
-          <line>21</line>
+          <url>file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/ActionsVisitor.java</url>
+          <line>23</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ActionsVisitor.java</url>
-          <line>29</line>
+          <url>file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/ActionsVisitor.java</url>
+          <line>31</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -530,10 +556,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="211" column="32" lean-forward="false" selection-start-line="211" selection-start-column="20" selection-end-line="211" selection-end-column="32" />
-          <folding>
-            <element signature="e#4020#4021#0" expanded="false" />
-            <element signature="e#4072#4073#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -553,16 +576,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ActionsVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/StateLabelLexer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1023">
-          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#231#247#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#891#892#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2261">
+          <caret line="97" column="40" lean-forward="false" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabel.interp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StateLabel.tokens">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabel.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -589,42 +631,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StateLabelLexer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChartParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="97" column="40" lean-forward="false" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
+        <state relative-caret-position="66">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StateLabel.tokens">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateActionParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelBaseListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StateLabel.interp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelBaseVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-297">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="363">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelLexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="15" column="64" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="15" selection-end-column="64" />
+        <state relative-caret-position="-250">
+          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/StateLabel.g4">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/ActionsVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="189">
+          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
           <folding />
         </state>
       </provider>

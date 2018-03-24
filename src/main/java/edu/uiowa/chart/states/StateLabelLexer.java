@@ -1,3 +1,4 @@
+package edu.uiowa.chart.states;
 // Generated from StateLabel.g4 by ANTLR 4.7.1
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
@@ -16,8 +17,8 @@ public class StateLabelLexer extends Lexer {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, ACTION_TYPE=3, ID=4, ID_LETTER=5, LINE_COMMENT=6, WS=7, 
-		AnyCharacter=8;
+		T__0=1, T__1=2, ActionType=3, Identifier=4, IdentifierLetter=5, LineComment=6, 
+		WhiteSpace=7, AnyCharacter=8;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -27,16 +28,16 @@ public class StateLabelLexer extends Lexer {
 	};
 
 	public static final String[] ruleNames = {
-		"T__0", "T__1", "ACTION_TYPE", "ID", "ID_LETTER", "DIGIT", "LINE_COMMENT", 
-		"WS", "AnyCharacter"
+		"T__0", "T__1", "ActionType", "Identifier", "IdentifierLetter", "Digit", 
+		"LineComment", "WhiteSpace", "AnyCharacter"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
 		null, "','", "':'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, null, "ACTION_TYPE", "ID", "ID_LETTER", "LINE_COMMENT", "WS", 
-		"AnyCharacter"
+		null, null, null, "ActionType", "Identifier", "IdentifierLetter", "LineComment", 
+		"WhiteSpace", "AnyCharacter"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 

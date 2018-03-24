@@ -1,3 +1,5 @@
+package edu.uiowa.chart.states;
+
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.util.HashMap;
@@ -10,7 +12,7 @@ public class ActionsVisitor extends StateLabelBaseVisitor<Map<String, String>>
 
     @Override
     public Map<String, String> visitAction(StateLabelParser.ActionContext ctx) {
-        for (TerminalNode actionType : ctx.ACTION_TYPE())
+        for (TerminalNode actionType : ctx.ActionType())
         {
             String key = actionType.getText();
             if(actions.containsKey(key))
