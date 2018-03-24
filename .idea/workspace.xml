@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bc9dd1e-f28a-491f-9864-7f9195233604" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/StateActionParser.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/edu/uiowa/chart/state/StateActionParserTest.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/ChartParser.iml" afterPath="$PROJECT_DIR$/ChartParser.iml" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/ActionsVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/ActionsVisitor.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateActionParser.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabel.g4" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/StateLabel.g4" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelBaseListener.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/StateLabelBaseListener.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelBaseVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/StateLabelBaseVisitor.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelLexer.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/StateLabelLexer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelListener.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/StateLabelListener.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelParser.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/StateLabelParser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/StateLabelVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/StateLabelVisitor.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/antlr-4.7.1-complete.jar" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/antlr-4.7.1-complete.jar" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/antlr.bat" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/antlr.bat" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/compile.bat" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/compile.bat" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/grun.bat" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/grun.bat" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/states/test.txt" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/test.txt" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/uiowa/chart/state/StateActionParserTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/uiowa/chart/state/StateActionParserTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,11 +34,21 @@
       <file leaf-file-name="StateActionParserTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/uiowa/chart/state/StateActionParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="91" column="24" lean-forward="false" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+            <state relative-caret-position="272">
+              <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,6 +79,7 @@
     <findStrings>
       <find>ArrayInit</find>
       <find>entry</find>
+      <find>packa</find>
     </findStrings>
     <replaceStrings>
       <replace>StateLabel</replace>
@@ -100,7 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/StateActionStruct.java" />
         <option value="$PROJECT_DIR$/src/main/java/StateStruct.java" />
         <option value="$PROJECT_DIR$/src/main/java/LabelListener.java" />
@@ -122,6 +117,7 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/StateLabelParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/StateActionParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/edu/uiowa/chart/state/StateActionParserTest.java" />
       </list>
     </option>
@@ -171,27 +167,6 @@
               <item name="ChartParser" type="b2602c69:ProjectViewProjectNode" />
               <item name="ChartParser" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChartParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChartParser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChartParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChartParser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChartParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChartParser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="state" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChartParser" type="b2602c69:ProjectViewProjectNode" />
@@ -431,7 +406,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521898271081</updated>
-      <workItem from="1521898273386" duration="13707000" />
+      <workItem from="1521898273386" duration="16639000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring">
       <created>1521926333671</created>
@@ -440,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521926333671</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added 7 tests for StateActionParserTest">
+      <created>1521927952905</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1521927952905</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -459,12 +441,24 @@
     <history-entry file="StateActionParserTest - 2018.03.24 at 16h 45m 06s.xml">
       <configuration name="StateActionParserTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StateActionParserTest - 2018.03.24 at 16h 55m 01s.xml">
+      <configuration name="StateActionParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StateActionParserTest - 2018.03.24 at 16h 56m 19s.xml">
+      <configuration name="StateActionParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StateActionParserTest - 2018.03.24 at 17h 03m 10s.xml">
+      <configuration name="StateActionParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StateActionParserTest - 2018.03.24 at 17h 34m 30s.xml">
+      <configuration name="StateActionParserTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="StateActionParserTest_parse - 2018.03.24 at 16h 37m 04s.xml">
       <configuration name="StateActionParserTest.parse" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13707000" />
+    <option name="totallyTimeSpent" value="16639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -536,7 +530,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Added 7 tests for StateActionParserTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 7 tests for StateActionParserTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -731,26 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/StateActionParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="15" column="64" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="15" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/util/StateLabelBaseListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -767,18 +742,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://MODULES/mdl-ChartParser">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-ChartParser</OriginalElement>
+          <nodes>
+            <node x="" y="">mdl-ChartParser</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="71.5" y="14.5" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="15" column="64" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="15" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/StateActionParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="295">
+          <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/uiowa/chart/state/StateActionParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="91" column="24" lean-forward="false" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+        <state relative-caret-position="272">
+          <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
