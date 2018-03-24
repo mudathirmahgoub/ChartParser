@@ -17,7 +17,7 @@ public class ActionsVisitor extends StateLabelBaseVisitor<Map<String, String>>
             String key = actionType.getText();
             if(actions.containsKey(key))
             {
-                actions.put(key, actions.get(key) + ctx.actionBody().getText());
+                actions.put(key, actions.get(key) + "\n" + ctx.actionBody().getText());
             }
             else
             {

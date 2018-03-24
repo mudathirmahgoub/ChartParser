@@ -14,11 +14,11 @@ class StateActionParserTest {
     {
         String stateLabel = "increasing\n" +
                 "entry:\n" +
-                "prePopulation = population;\n" +
-                "population = prePopulation * 2.0;";
+                "x = y;\n" +
+                "y = x * 2.0;";
 
         Map<String, String> actions = StateActionParser.parse(stateLabel);
-        assertEquals("prePopulation=population;population=prePopulation*2.0;",
+        assertEquals("x=y;y=x*2.0;",
                 actions.get("entry"));
     }
 
@@ -27,11 +27,11 @@ class StateActionParserTest {
     {
         String stateLabel = "increasing\n" +
                 "during:\n" +
-                "prePopulation = population;\n" +
-                "population = prePopulation * 2.0;";
+                "x = y;\n" +
+                "y = x * 2.0;";
 
         Map<String, String> actions = StateActionParser.parse(stateLabel);
-        assertEquals("prePopulation=population;population=prePopulation*2.0;",
+        assertEquals("x=y;y=x*2.0;",
                 actions.get("during"));
     }
 
@@ -40,11 +40,11 @@ class StateActionParserTest {
     {
         String stateLabel = "increasing\n" +
                 "exit:\n" +
-                "prePopulation = population;\n" +
-                "population = prePopulation * 2.0;";
+                "x = y;\n" +
+                "y = x * 2.0;";
 
         Map<String, String> actions = StateActionParser.parse(stateLabel);
-        assertEquals("prePopulation=population;population=prePopulation*2.0;",
+        assertEquals("x=y;y=x*2.0;",
                 actions.get("exit"));
     }
 
@@ -53,13 +53,13 @@ class StateActionParserTest {
     {
         String stateLabel = "increasing\n" +
                 "entry, during:\n" +
-                "prePopulation = population;\n" +
-                "population = prePopulation * 2.0;";
+                "x = y;\n" +
+                "y = x * 2.0;";
 
         Map<String, String> actions = StateActionParser.parse(stateLabel);
-        assertEquals("prePopulation=population;population=prePopulation*2.0;",
+        assertEquals("x=y;y=x*2.0;",
                 actions.get("entry"));
-        assertEquals("prePopulation=population;population=prePopulation*2.0;",
+        assertEquals("x=y;y=x*2.0;",
                 actions.get("during"));
     }
 
@@ -68,15 +68,15 @@ class StateActionParserTest {
     {
         String stateLabel = "increasing\n" +
                 "entry, during, exit:\n" +
-                "prePopulation = population;\n" +
-                "population = prePopulation * 2.0;";
+                "x = y;\n" +
+                "y = x * 2.0;";
 
         Map<String, String> actions = StateActionParser.parse(stateLabel);
-        assertEquals("prePopulation=population;population=prePopulation*2.0;",
+        assertEquals("x=y;y=x*2.0;",
                 actions.get("entry"));
-        assertEquals("prePopulation=population;population=prePopulation*2.0;",
+        assertEquals("x=y;y=x*2.0;",
                 actions.get("during"));
-        assertEquals("prePopulation=population;population=prePopulation*2.0;",
+        assertEquals("x=y;y=x*2.0;",
                 actions.get("exit"));
     }
 
@@ -95,5 +95,22 @@ class StateActionParserTest {
                 actions.get("entry"));
         assertEquals("y=y;",
                 actions.get("during"));
+    }
+
+    @Test
+    void parseEntryExitActionExitAction()
+    {
+        String stateLabel = "increasing\n" +
+                "entry, exit:\n" +
+                "x = x;\n" +
+                "exit:\n" +
+                "y = y;\n" ;
+
+
+        Map<String, String> actions = StateActionParser.parse(stateLabel);
+        assertEquals("x=x;",
+                actions.get("entry"));
+        assertEquals("x=x;\ny=y;",
+                actions.get("exit"));
     }
 }
