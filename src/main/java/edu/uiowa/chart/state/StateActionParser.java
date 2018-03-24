@@ -1,3 +1,5 @@
+package edu.uiowa.chart.state;
+
 import edu.uiowa.chart.state.util.*;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
@@ -6,14 +8,10 @@ import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.util.Map;
 
-public class Main {
-
-    public static void main(String[] args)
+public class StateActionParser
+{
+    public static Map<String, String> parse(String stateLabel)
     {
-        String stateLabel = "increasing\n" +
-                            "entry:\n" +
-                            "prePopulation = population;\n" +
-                            "population = prePopulation * 2.0;";
         CharStream charStream = CharStreams.fromString(stateLabel);
         StateLabelLexer lexer = new StateLabelLexer(charStream);
         CommonTokenStream tokenStream = new CommonTokenStream(lexer);
@@ -23,6 +21,6 @@ public class Main {
         System.out.println(tree.toStringTree(parser));
         ActionsVisitor visitor = new ActionsVisitor();
         Map<String, String> actions =  visitor.visit(tree);
-        System.out.println(actions);
+        return actions;
     }
 }

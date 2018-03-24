@@ -1,4 +1,4 @@
-package edu.uiowa.chart.states;// Generated from StateLabel.g4 by ANTLR 4.7.1
+package edu.uiowa.chart.state.util;// Generated from StateLabel.g4 by ANTLR 4.7.1
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**

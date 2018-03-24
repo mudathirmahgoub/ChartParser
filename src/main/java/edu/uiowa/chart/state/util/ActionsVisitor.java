@@ -1,4 +1,4 @@
-package edu.uiowa.chart.states;
+package edu.uiowa.chart.state.util;
 
 import org.antlr.v4.runtime.tree.TerminalNode;
 
