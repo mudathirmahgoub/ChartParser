@@ -2,14 +2,14 @@ grammar StateLabel;
 
 // parser rules
 
-stateLabel : Identifier actions?;
+stateLabel : Identifier '\r'? '\n'* actions?;
 
 actions : (action)+ ;
 
 action : ActionType (',' ActionType)*  ':'  actionBody
          {System.out.println($actionBody.text);} ;
 
-actionBody: .*? ;
+actionBody: (.| '\r'? '\n')*? ;
 
 // lexer rules
 
@@ -23,6 +23,6 @@ fragment Digit : '0'..'9' ;
 
 LineComment : '%' .*? '\n' -> skip ;
 
-WhiteSpace : [ \t\n\r]+ -> skip ;
+WhiteSpace : [ \t\r]+ -> skip ;
 
 AnyCharacter : . ;

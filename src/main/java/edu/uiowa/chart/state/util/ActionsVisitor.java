@@ -26,9 +26,4 @@ public class ActionsVisitor extends StateLabelBaseVisitor<Map<String, String>>
         }
         return actions;
     }
-
-    @Override
-    public Map<String, String> visitActionBody(StateLabelParser.ActionBodyContext ctx) {
-        return actions;
-    }
 }

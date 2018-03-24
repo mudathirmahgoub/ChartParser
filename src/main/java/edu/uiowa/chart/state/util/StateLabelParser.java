@@ -1,10 +1,13 @@
-package edu.uiowa.chart.state.util;
 // Generated from StateLabel.g4 by ANTLR 4.7.1
+package edu.uiowa.chart.state.util;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
 import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class StateLabelParser extends Parser {
@@ -14,8 +17,8 @@ public class StateLabelParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, ActionType=3, Identifier=4, IdentifierLetter=5, LineComment=6, 
-		WhiteSpace=7, AnyCharacter=8;
+		T__0=1, T__1=2, T__2=3, T__3=4, ActionType=5, Identifier=6, IdentifierLetter=7, 
+		LineComment=8, WhiteSpace=9, AnyCharacter=10;
 	public static final int
 		RULE_stateLabel = 0, RULE_actions = 1, RULE_action = 2, RULE_actionBody = 3;
 	public static final String[] ruleNames = {
@@ -23,11 +26,11 @@ public class StateLabelParser extends Parser {
 	};
 
 	private static final String[] _LITERAL_NAMES = {
-		null, "','", "':'"
+		null, "'\r'", "'\n'", "','", "':'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, null, "ActionType", "Identifier", "IdentifierLetter", "LineComment", 
-		"WhiteSpace", "AnyCharacter"
+		null, null, null, null, null, "ActionType", "Identifier", "IdentifierLetter", 
+		"LineComment", "WhiteSpace", "AnyCharacter"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -114,9 +117,33 @@ public class StateLabelParser extends Parser {
 			setState(10);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if (_la==ActionType) {
+			if (_la==T__0) {
 				{
 				setState(9);
+				match(T__0);
+				}
+			}
+
+			setState(15);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while (_la==T__1) {
+				{
+				{
+				setState(12);
+				match(T__1);
+				}
+				}
+				setState(17);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			setState(19);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==ActionType) {
+				{
+				setState(18);
 				actions();
 				}
 			}
@@ -167,17 +194,17 @@ public class StateLabelParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(13); 
+			setState(22); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(12);
+				setState(21);
 				action();
 				}
 				}
-				setState(15); 
+				setState(24); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==ActionType );
@@ -229,27 +256,27 @@ public class StateLabelParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(17);
+			setState(26);
 			match(ActionType);
-			setState(22);
+			setState(31);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==T__0) {
+			while (_la==T__2) {
 				{
 				{
-				setState(18);
-				match(T__0);
-				setState(19);
+				setState(27);
+				match(T__2);
+				setState(28);
 				match(ActionType);
 				}
 				}
-				setState(24);
+				setState(33);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(25);
-			match(T__1);
-			setState(26);
+			setState(34);
+			match(T__3);
+			setState(35);
 			((ActionContext)_localctx).actionBody = actionBody();
 			System.out.println((((ActionContext)_localctx).actionBody!=null?_input.getText(((ActionContext)_localctx).actionBody.start,((ActionContext)_localctx).actionBody.stop):null));
 			}
@@ -288,25 +315,48 @@ public class StateLabelParser extends Parser {
 	public final ActionBodyContext actionBody() throws RecognitionException {
 		ActionBodyContext _localctx = new ActionBodyContext(_ctx, getState());
 		enterRule(_localctx, 6, RULE_actionBody);
+		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(32);
+			setState(45);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,3,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,7,_ctx);
 			while ( _alt!=1 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1+1 ) {
 					{
-					{
-					setState(29);
-					matchWildcard();
+					setState(43);
+					_errHandler.sync(this);
+					switch ( getInterpreter().adaptivePredict(_input,6,_ctx) ) {
+					case 1:
+						{
+						setState(38);
+						matchWildcard();
+						}
+						break;
+					case 2:
+						{
+						setState(40);
+						_errHandler.sync(this);
+						_la = _input.LA(1);
+						if (_la==T__0) {
+							{
+							setState(39);
+							match(T__0);
+							}
+						}
+
+						setState(42);
+						match(T__1);
+						}
+						break;
 					}
 					} 
 				}
-				setState(34);
+				setState(47);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,3,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,7,_ctx);
 			}
 			}
 		}
@@ -322,17 +372,20 @@ public class StateLabelParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\n&\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\3\2\3\2\5\2\r\n\2\3\3\6\3\20\n\3\r\3\16\3\21\3\4\3"+
-		"\4\3\4\7\4\27\n\4\f\4\16\4\32\13\4\3\4\3\4\3\4\3\4\3\5\7\5!\n\5\f\5\16"+
-		"\5$\13\5\3\5\3\"\2\6\2\4\6\b\2\2\2%\2\n\3\2\2\2\4\17\3\2\2\2\6\23\3\2"+
-		"\2\2\b\"\3\2\2\2\n\f\7\6\2\2\13\r\5\4\3\2\f\13\3\2\2\2\f\r\3\2\2\2\r\3"+
-		"\3\2\2\2\16\20\5\6\4\2\17\16\3\2\2\2\20\21\3\2\2\2\21\17\3\2\2\2\21\22"+
-		"\3\2\2\2\22\5\3\2\2\2\23\30\7\5\2\2\24\25\7\3\2\2\25\27\7\5\2\2\26\24"+
-		"\3\2\2\2\27\32\3\2\2\2\30\26\3\2\2\2\30\31\3\2\2\2\31\33\3\2\2\2\32\30"+
-		"\3\2\2\2\33\34\7\4\2\2\34\35\5\b\5\2\35\36\b\4\1\2\36\7\3\2\2\2\37!\13"+
-		"\2\2\2 \37\3\2\2\2!$\3\2\2\2\"#\3\2\2\2\" \3\2\2\2#\t\3\2\2\2$\"\3\2\2"+
-		"\2\6\f\21\30\"";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\f\63\4\2\t\2\4\3"+
+		"\t\3\4\4\t\4\4\5\t\5\3\2\3\2\5\2\r\n\2\3\2\7\2\20\n\2\f\2\16\2\23\13\2"+
+		"\3\2\5\2\26\n\2\3\3\6\3\31\n\3\r\3\16\3\32\3\4\3\4\3\4\7\4 \n\4\f\4\16"+
+		"\4#\13\4\3\4\3\4\3\4\3\4\3\5\3\5\5\5+\n\5\3\5\7\5.\n\5\f\5\16\5\61\13"+
+		"\5\3\5\3/\2\6\2\4\6\b\2\2\2\66\2\n\3\2\2\2\4\30\3\2\2\2\6\34\3\2\2\2\b"+
+		"/\3\2\2\2\n\f\7\b\2\2\13\r\7\3\2\2\f\13\3\2\2\2\f\r\3\2\2\2\r\21\3\2\2"+
+		"\2\16\20\7\4\2\2\17\16\3\2\2\2\20\23\3\2\2\2\21\17\3\2\2\2\21\22\3\2\2"+
+		"\2\22\25\3\2\2\2\23\21\3\2\2\2\24\26\5\4\3\2\25\24\3\2\2\2\25\26\3\2\2"+
+		"\2\26\3\3\2\2\2\27\31\5\6\4\2\30\27\3\2\2\2\31\32\3\2\2\2\32\30\3\2\2"+
+		"\2\32\33\3\2\2\2\33\5\3\2\2\2\34!\7\7\2\2\35\36\7\5\2\2\36 \7\7\2\2\37"+
+		"\35\3\2\2\2 #\3\2\2\2!\37\3\2\2\2!\"\3\2\2\2\"$\3\2\2\2#!\3\2\2\2$%\7"+
+		"\6\2\2%&\5\b\5\2&\'\b\4\1\2\'\7\3\2\2\2(.\13\2\2\2)+\7\3\2\2*)\3\2\2\2"+
+		"*+\3\2\2\2+,\3\2\2\2,.\7\4\2\2-(\3\2\2\2-*\3\2\2\2.\61\3\2\2\2/\60\3\2"+
+		"\2\2/-\3\2\2\2\60\t\3\2\2\2\61/\3\2\2\2\n\f\21\25\32!*-/";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
