@@ -7,16 +7,16 @@ stateLabel : Identifier '\r'? '\n'* actions?;
 actions : (action)+ ;
 
 action : actionType (',' actionType)*  ':'  actionBody
-         | 'bind'  ':' Identifier? (',' Identifier)* ;
+         | Bind  ':' Identifier? (',' Identifier)* ;
 
 actionType: Entry
             | During
             | Exit
             | On Identifier
-            | On After '(' Float ',' Identifier ')'
-            | On Before '(' Float ',' Identifier ')'
-            | On At '(' Float ',' Identifier ')'
-            | On Every '(' Float ',' Identifier ')'
+            | On After '(' Number ',' Identifier ')'
+            | On Before '(' Number ',' Identifier ')'
+            | On At '(' Number ',' Identifier ')'
+            | On Every '(' Number ',' Identifier ')'
             ;
 
 actionBody: (.| '\r'? '\n')*? ;
@@ -28,6 +28,8 @@ Entry : 'entry' | 'en' ;
 During : 'during' | 'du' ;
 
 Exit : 'exit' | 'ex' ;
+
+Bind : 'bind' ;
 
 On : 'on' ;
 
@@ -42,6 +44,8 @@ Every : 'every' ;
 Identifier : IdentifierLetter (IdentifierLetter | Digit)* ;
 
 IdentifierLetter : 'a'..'z'|'A'..'Z'|'_' ;
+
+Number : Integer | Float ;
 
 Integer : Digit+ ;
 

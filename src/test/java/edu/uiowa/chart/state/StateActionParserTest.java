@@ -193,4 +193,52 @@ class StateActionParserTest {
         assertEquals("x=x;",
                 actions.get("on event_name"));
     }
+
+    @Test
+    void parseAfter()
+    {
+        String stateLabel = "increasing\n" +
+                "on after(5, event_name): x = x;";
+
+
+        Map<String, String> actions = StateActionParser.parse(stateLabel);
+        assertEquals("x=x;",
+                actions.get("on after(5,event_name)"));
+    }
+
+    @Test
+    void parseBefore()
+    {
+        String stateLabel = "increasing\n" +
+                "on before(5.0, event_name): x = x;";
+
+
+        Map<String, String> actions = StateActionParser.parse(stateLabel);
+        assertEquals("x=x;",
+                actions.get("on before(5.0,event_name)"));
+    }
+
+    @Test
+    void parseAt()
+    {
+        String stateLabel = "increasing\n" +
+                "on at(5, event_name): x = x;";
+
+
+        Map<String, String> actions = StateActionParser.parse(stateLabel);
+        assertEquals("x=x;",
+                actions.get("on at(5,event_name)"));
+    }
+
+    @Test
+    void parseEvery()
+    {
+        String stateLabel = "increasing\n" +
+                "on every(5, event_name): x = x;";
+
+
+        Map<String, String> actions = StateActionParser.parse(stateLabel);
+        assertEquals("x=x;",
+                actions.get("on every(5,event_name)"));
+    }
 }

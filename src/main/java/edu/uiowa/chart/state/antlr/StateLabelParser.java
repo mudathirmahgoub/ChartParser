@@ -1,5 +1,5 @@
 // Generated from StateLabel.g4 by ANTLR 4.7.1
-package edu.uiowa.chart.state.util;
+package edu.uiowa.chart.state.antlr;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -17,9 +17,10 @@ public class StateLabelParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, Entry=8, During=9, 
-		Exit=10, On=11, After=12, Before=13, At=14, Every=15, Identifier=16, IdentifierLetter=17, 
-		Integer=18, Float=19, Digit=20, LineComment=21, WhiteSpace=22, AnyCharacter=23;
+		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, Entry=7, During=8, Exit=9, 
+		Bind=10, On=11, After=12, Before=13, At=14, Every=15, Identifier=16, IdentifierLetter=17, 
+		Number=18, Integer=19, Float=20, Digit=21, LineComment=22, WhiteSpace=23, 
+		AnyCharacter=24;
 	public static final int
 		RULE_stateLabel = 0, RULE_actions = 1, RULE_action = 2, RULE_actionType = 3, 
 		RULE_actionBody = 4;
@@ -28,13 +29,13 @@ public class StateLabelParser extends Parser {
 	};
 
 	private static final String[] _LITERAL_NAMES = {
-		null, "'\r'", "'\n'", "','", "':'", "'bind'", "'('", "')'", null, null, 
-		null, "'on'", "'after'", "'before'", "'at'", "'every'"
+		null, "'\r'", "'\n'", "','", "':'", "'('", "')'", null, null, null, "'bind'", 
+		"'on'", "'after'", "'before'", "'at'", "'every'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, null, null, null, null, null, null, "Entry", "During", "Exit", 
+		null, null, null, null, null, null, null, "Entry", "During", "Exit", "Bind", 
 		"On", "After", "Before", "At", "Every", "Identifier", "IdentifierLetter", 
-		"Integer", "Float", "Digit", "LineComment", "WhiteSpace", "AnyCharacter"
+		"Number", "Integer", "Float", "Digit", "LineComment", "WhiteSpace", "AnyCharacter"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -145,7 +146,7 @@ public class StateLabelParser extends Parser {
 			setState(21);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << Entry) | (1L << During) | (1L << Exit) | (1L << On))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Entry) | (1L << During) | (1L << Exit) | (1L << Bind) | (1L << On))) != 0)) {
 				{
 				setState(20);
 				actions();
@@ -211,7 +212,7 @@ public class StateLabelParser extends Parser {
 				setState(26); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__4) | (1L << Entry) | (1L << During) | (1L << Exit) | (1L << On))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Entry) | (1L << During) | (1L << Exit) | (1L << Bind) | (1L << On))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -235,6 +236,7 @@ public class StateLabelParser extends Parser {
 		public ActionBodyContext actionBody() {
 			return getRuleContext(ActionBodyContext.class,0);
 		}
+		public TerminalNode Bind() { return getToken(StateLabelParser.Bind, 0); }
 		public List<TerminalNode> Identifier() { return getTokens(StateLabelParser.Identifier); }
 		public TerminalNode Identifier(int i) {
 			return getToken(StateLabelParser.Identifier, i);
@@ -296,11 +298,11 @@ public class StateLabelParser extends Parser {
 				actionBody();
 				}
 				break;
-			case T__4:
+			case Bind:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(39);
-				match(T__4);
+				match(Bind);
 				setState(40);
 				match(T__3);
 				setState(42);
@@ -353,7 +355,7 @@ public class StateLabelParser extends Parser {
 		public TerminalNode On() { return getToken(StateLabelParser.On, 0); }
 		public TerminalNode Identifier() { return getToken(StateLabelParser.Identifier, 0); }
 		public TerminalNode After() { return getToken(StateLabelParser.After, 0); }
-		public TerminalNode Float() { return getToken(StateLabelParser.Float, 0); }
+		public TerminalNode Number() { return getToken(StateLabelParser.Number, 0); }
 		public TerminalNode Before() { return getToken(StateLabelParser.Before, 0); }
 		public TerminalNode At() { return getToken(StateLabelParser.At, 0); }
 		public TerminalNode Every() { return getToken(StateLabelParser.Every, 0); }
@@ -421,15 +423,15 @@ public class StateLabelParser extends Parser {
 				setState(59);
 				match(After);
 				setState(60);
-				match(T__5);
+				match(T__4);
 				setState(61);
-				match(Float);
+				match(Number);
 				setState(62);
 				match(T__2);
 				setState(63);
 				match(Identifier);
 				setState(64);
-				match(T__6);
+				match(T__5);
 				}
 				break;
 			case 6:
@@ -440,15 +442,15 @@ public class StateLabelParser extends Parser {
 				setState(66);
 				match(Before);
 				setState(67);
-				match(T__5);
+				match(T__4);
 				setState(68);
-				match(Float);
+				match(Number);
 				setState(69);
 				match(T__2);
 				setState(70);
 				match(Identifier);
 				setState(71);
-				match(T__6);
+				match(T__5);
 				}
 				break;
 			case 7:
@@ -459,15 +461,15 @@ public class StateLabelParser extends Parser {
 				setState(73);
 				match(At);
 				setState(74);
-				match(T__5);
+				match(T__4);
 				setState(75);
-				match(Float);
+				match(Number);
 				setState(76);
 				match(T__2);
 				setState(77);
 				match(Identifier);
 				setState(78);
-				match(T__6);
+				match(T__5);
 				}
 				break;
 			case 8:
@@ -478,15 +480,15 @@ public class StateLabelParser extends Parser {
 				setState(80);
 				match(Every);
 				setState(81);
-				match(T__5);
+				match(T__4);
 				setState(82);
-				match(Float);
+				match(Number);
 				setState(83);
 				match(T__2);
 				setState(84);
 				match(Identifier);
 				setState(85);
-				match(T__6);
+				match(T__5);
 				}
 				break;
 			}
@@ -582,7 +584,7 @@ public class StateLabelParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\31e\4\2\t\2\4\3\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\32e\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\3\2\5\2\17\n\2\3\2\7\2\22\n\2\f\2\16\2"+
 		"\25\13\2\3\2\5\2\30\n\2\3\3\6\3\33\n\3\r\3\16\3\34\3\4\3\4\3\4\7\4\"\n"+
 		"\4\f\4\16\4%\13\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4-\n\4\3\4\3\4\7\4\61\n\4"+
@@ -596,15 +598,15 @@ public class StateLabelParser extends Parser {
 		"\3\2\2\2\27\30\3\2\2\2\30\3\3\2\2\2\31\33\5\6\4\2\32\31\3\2\2\2\33\34"+
 		"\3\2\2\2\34\32\3\2\2\2\34\35\3\2\2\2\35\5\3\2\2\2\36#\5\b\5\2\37 \7\5"+
 		"\2\2 \"\5\b\5\2!\37\3\2\2\2\"%\3\2\2\2#!\3\2\2\2#$\3\2\2\2$&\3\2\2\2%"+
-		"#\3\2\2\2&\'\7\6\2\2\'(\5\n\6\2(\66\3\2\2\2)*\7\7\2\2*,\7\6\2\2+-\7\22"+
+		"#\3\2\2\2&\'\7\6\2\2\'(\5\n\6\2(\66\3\2\2\2)*\7\f\2\2*,\7\6\2\2+-\7\22"+
 		"\2\2,+\3\2\2\2,-\3\2\2\2-\62\3\2\2\2./\7\5\2\2/\61\7\22\2\2\60.\3\2\2"+
 		"\2\61\64\3\2\2\2\62\60\3\2\2\2\62\63\3\2\2\2\63\66\3\2\2\2\64\62\3\2\2"+
-		"\2\65\36\3\2\2\2\65)\3\2\2\2\66\7\3\2\2\2\67Y\7\n\2\28Y\7\13\2\29Y\7\f"+
-		"\2\2:;\7\r\2\2;Y\7\22\2\2<=\7\r\2\2=>\7\16\2\2>?\7\b\2\2?@\7\25\2\2@A"+
-		"\7\5\2\2AB\7\22\2\2BY\7\t\2\2CD\7\r\2\2DE\7\17\2\2EF\7\b\2\2FG\7\25\2"+
-		"\2GH\7\5\2\2HI\7\22\2\2IY\7\t\2\2JK\7\r\2\2KL\7\20\2\2LM\7\b\2\2MN\7\25"+
-		"\2\2NO\7\5\2\2OP\7\22\2\2PY\7\t\2\2QR\7\r\2\2RS\7\21\2\2ST\7\b\2\2TU\7"+
-		"\25\2\2UV\7\5\2\2VW\7\22\2\2WY\7\t\2\2X\67\3\2\2\2X8\3\2\2\2X9\3\2\2\2"+
+		"\2\65\36\3\2\2\2\65)\3\2\2\2\66\7\3\2\2\2\67Y\7\t\2\28Y\7\n\2\29Y\7\13"+
+		"\2\2:;\7\r\2\2;Y\7\22\2\2<=\7\r\2\2=>\7\16\2\2>?\7\7\2\2?@\7\24\2\2@A"+
+		"\7\5\2\2AB\7\22\2\2BY\7\b\2\2CD\7\r\2\2DE\7\17\2\2EF\7\7\2\2FG\7\24\2"+
+		"\2GH\7\5\2\2HI\7\22\2\2IY\7\b\2\2JK\7\r\2\2KL\7\20\2\2LM\7\7\2\2MN\7\24"+
+		"\2\2NO\7\5\2\2OP\7\22\2\2PY\7\b\2\2QR\7\r\2\2RS\7\21\2\2ST\7\7\2\2TU\7"+
+		"\24\2\2UV\7\5\2\2VW\7\22\2\2WY\7\b\2\2X\67\3\2\2\2X8\3\2\2\2X9\3\2\2\2"+
 		"X:\3\2\2\2X<\3\2\2\2XC\3\2\2\2XJ\3\2\2\2XQ\3\2\2\2Y\t\3\2\2\2Z`\13\2\2"+
 		"\2[]\7\3\2\2\\[\3\2\2\2\\]\3\2\2\2]^\3\2\2\2^`\7\4\2\2_Z\3\2\2\2_\\\3"+
 		"\2\2\2`c\3\2\2\2ab\3\2\2\2a_\3\2\2\2b\13\3\2\2\2ca\3\2\2\2\16\16\23\27"+

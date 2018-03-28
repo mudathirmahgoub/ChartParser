@@ -1,13 +1,12 @@
 package edu.uiowa.chart.state;
 
-import edu.uiowa.chart.state.util.*;
+import edu.uiowa.chart.state.antlr.*;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class StateActionParser
 {

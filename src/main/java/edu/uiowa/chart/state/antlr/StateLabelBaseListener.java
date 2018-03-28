@@ -1,5 +1,5 @@
 // Generated from StateLabel.g4 by ANTLR 4.7.1
-package edu.uiowa.chart.state.util;
+package edu.uiowa.chart.state.antlr;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
