@@ -26,16 +26,27 @@ public class ActionsVisitor extends StateLabelBaseVisitor<HashMap<String, String
                 {
                     builder.append(ctx.getChild(i).getText());
                 }
-                actions.put("bind", builder.toString());
+
+                if (actions.containsKey("bind"))
+                {
+                    actions.put("bind", actions.get("bind") + "," + builder.toString());
+                }
+                else
+                {
+                    actions.put("bind", builder.toString());
+                }
             }
             else // action type
             {
                 for (StateLabelParser.ActionTypeContext actionType : ctx.actionType()) {
                     String key = getKey(actionType);
 
-                    if (actions.containsKey(key)) {
+                    if (actions.containsKey(key))
+                    {
                         actions.put(key, actions.get(key) + "\n" + ctx.actionBody().getText());
-                    } else {
+                    }
+                    else
+                    {
                         actions.put(key, ctx.actionBody().getText());
                     }
                 }

@@ -18,7 +18,6 @@ public class StateActionParser
         StateLabelParser parser = new StateLabelParser(tokenStream);
 
         ParseTree tree =  parser.stateLabel();
-        System.out.println(tree.toStringTree(parser));
         ActionsVisitor visitor = new ActionsVisitor();
         HashMap<String, String> actions =  visitor.visit(tree);
 
