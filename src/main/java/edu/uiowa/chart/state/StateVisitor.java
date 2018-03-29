@@ -3,15 +3,19 @@ import edu.uiowa.chart.state.antlr.*;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 
-public class StateVisitor extends StateLabelBaseVisitor<HashMap<String, String>>
+public class StateVisitor extends StateLabelBaseVisitor<HashMap<String, List<String>>>
 {
-    private HashMap<String, String> actions = new HashMap<>();
+    private HashMap<String, List<String>> actions = new HashMap<>();
 
     @Override
-    public HashMap<String, String> visitAction(StateLabelParser.ActionContext ctx)
+    public HashMap<String, List<String>> visitAction(StateLabelParser.ActionContext ctx)
     {
         if(ctx.children.size() > 0)
         {
@@ -27,13 +31,16 @@ public class StateVisitor extends StateLabelBaseVisitor<HashMap<String, String>>
                     builder.append(ctx.getChild(i).getText());
                 }
 
+                List<String> list = new ArrayList<>();
+                list.addAll(Arrays.asList(builder.toString().split(",")));
+
                 if (actions.containsKey("bind"))
                 {
-                    actions.put("bind", actions.get("bind") + "," + builder.toString());
+                    actions.get("bind").addAll(list);
                 }
                 else
                 {
-                    actions.put("bind", builder.toString());
+                    actions.put("bind", list);
                 }
             }
             else // action type
@@ -41,13 +48,16 @@ public class StateVisitor extends StateLabelBaseVisitor<HashMap<String, String>>
                 for (StateLabelParser.ActionTypeContext actionType : ctx.actionType()) {
                     String key = getKey(actionType);
 
+                    List<String> list = new ArrayList<>();
+                    list.addAll(Arrays.asList(ctx.actionBody().getText().split("(;|\n)")));
+
                     if (actions.containsKey(key))
                     {
-                        actions.put(key, actions.get(key) + "\n" + ctx.actionBody().getText());
+                        actions.get(key).addAll(list);
                     }
                     else
                     {
-                        actions.put(key, ctx.actionBody().getText());
+                        actions.put(key, list);
                     }
                 }
             }

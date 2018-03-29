@@ -5,6 +5,7 @@ import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 
+import java.util.List;
 import java.util.Map;
 
 public class Main {
@@ -23,7 +24,7 @@ public class Main {
         ParseTree tree =  parser.stateLabel();
         System.out.println(tree.toStringTree(parser));
         StateVisitor visitor = new StateVisitor();
-        Map<String, String> actions =  visitor.visit(tree);
+        Map<String, List<String>> actions =  visitor.visit(tree);
         System.out.println(actions);
     }
 }

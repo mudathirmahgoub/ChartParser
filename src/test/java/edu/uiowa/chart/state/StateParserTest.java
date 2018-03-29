@@ -17,9 +17,9 @@ class StateParserTest {
                 "x = y;\n" +
                 "y = x * 2.0;";
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("\nx=y;\ny=x*2.0;",
-                actions.get("entry"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=y", actions.get("entry")[0]);
+        assertEquals("y=x*2.0", actions.get("entry")[1]);
     }
 
     @Test
@@ -30,9 +30,9 @@ class StateParserTest {
                 "x = y;\n" +
                 "y = x * 2.0;";
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("\nx=y;\ny=x*2.0;",
-                actions.get("entry"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=y", actions.get("entry")[0]);
+        assertEquals("y=x*2.0", actions.get("entry")[1]);
     }
 
     @Test
@@ -43,9 +43,9 @@ class StateParserTest {
                 "x = y;\n" +
                 "y = x * 2.0;";
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("\nx=y;\ny=x*2.0;",
-                actions.get("during"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=y", actions.get("during")[0]);
+        assertEquals("y=x*2.0", actions.get("during")[1]);
     }
 
     @Test
@@ -56,9 +56,9 @@ class StateParserTest {
                 "x = y;\n" +
                 "y = x * 2.0;";
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("\nx=y;\ny=x*2.0;",
-                actions.get("during"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=y", actions.get("during")[0]);
+        assertEquals("y=x*2.0", actions.get("during")[1]);
     }
 
     @Test
@@ -69,9 +69,9 @@ class StateParserTest {
                 "x = y;\n" +
                 "y = x * 2.0;";
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("\nx=y;\ny=x*2.0;",
-                actions.get("exit"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=y", actions.get("exit")[0]);
+        assertEquals("y=x*2.0", actions.get("exit")[1]);
     }
 
     @Test
@@ -82,9 +82,9 @@ class StateParserTest {
                 "x = y;\n" +
                 "y = x * 2.0;";
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("\nx=y;\ny=x*2.0;",
-                actions.get("exit"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=y", actions.get("exit")[0]);
+        assertEquals("y=x*2.0", actions.get("exit")[1]);
     }
 
     @Test
@@ -95,11 +95,11 @@ class StateParserTest {
                 "x = y;\n" +
                 "y = x * 2.0;";
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("\nx=y;\ny=x*2.0;",
-                actions.get("entry"));
-        assertEquals("\nx=y;\ny=x*2.0;",
-                actions.get("during"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=y", actions.get("entry")[0]);
+        assertEquals("y=x*2.0", actions.get("entry")[1]);
+        assertEquals("x=y", actions.get("during")[0]);
+        assertEquals("y=x*2.0", actions.get("during")[1]);
     }
 
     @Test
@@ -110,13 +110,14 @@ class StateParserTest {
                 "x = y;\n" +
                 "y = x * 2.0;";
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("\nx=y;\ny=x*2.0;",
-                actions.get("entry"));
-        assertEquals("\nx=y;\ny=x*2.0;",
-                actions.get("during"));
-        assertEquals("\nx=y;\ny=x*2.0;",
-                actions.get("exit"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+
+        assertEquals("x=y", actions.get("entry")[0]);
+        assertEquals("y=x*2.0", actions.get("entry")[1]);
+        assertEquals("x=y", actions.get("during")[0]);
+        assertEquals("y=x*2.0", actions.get("during")[1]);
+        assertEquals("x=y", actions.get("exit")[0]);
+        assertEquals("y=x*2.0", actions.get("exit")[1]);
     }
 
     @Test
@@ -129,11 +130,9 @@ class StateParserTest {
                 "y = y;" ;
 
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("\nx=x;\n",
-                actions.get("entry"));
-        assertEquals("\ny=y;",
-                actions.get("during"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=x", actions.get("entry")[0]);
+        assertEquals("y=y", actions.get("during")[0]);
     }
 
     @Test
@@ -146,11 +145,10 @@ class StateParserTest {
                 "y = y;" ;
 
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("\nx=x;\n",
-                actions.get("entry"));
-        assertEquals("\nx=x;\n\n\ny=y;",
-                actions.get("exit"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=x", actions.get("entry")[0]);
+        assertEquals("x=x", actions.get("exit")[0]);
+        assertEquals("y=y", actions.get("exit")[1]);
     }
 
     @Test
@@ -163,11 +161,10 @@ class StateParserTest {
                 "y = y;" ;
 
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("\nx=x;\n",
-                actions.get("entry"));
-        assertEquals("\nx=x;\n\n\ny=y;",
-                actions.get("exit"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=x", actions.get("entry")[0]);
+        assertEquals("x=x",  actions.get("exit")[0]);
+        assertEquals("y=y",  actions.get("exit")[1]);
     }
 
     @Test
@@ -177,9 +174,8 @@ class StateParserTest {
                 "bind: event_name";
 
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("event_name",
-                actions.get("bind"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("event_name", actions.get("bind")[0]);
     }
 
     @Test
@@ -189,9 +185,8 @@ class StateParserTest {
                 "on event_name: x = x;";
 
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("x=x;",
-                actions.get("on event_name"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=x", actions.get("on event_name")[0]);
     }
 
     @Test
@@ -201,9 +196,8 @@ class StateParserTest {
                 "on after(5, event_name): x = x;";
 
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("x=x;",
-                actions.get("on after(5,event_name)"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=x", actions.get("on after(5,event_name)")[0]);
     }
 
     @Test
@@ -213,9 +207,8 @@ class StateParserTest {
                 "on before(5.0, event_name): x = x;";
 
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("x=x;",
-                actions.get("on before(5.0,event_name)"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=x", actions.get("on before(5.0,event_name)")[0]);
     }
 
     @Test
@@ -225,9 +218,8 @@ class StateParserTest {
                 "on at(5, event_name): x = x;";
 
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("x=x;",
-                actions.get("on at(5,event_name)"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=x", actions.get("on at(5,event_name)")[0]);
     }
 
     @Test
@@ -237,8 +229,7 @@ class StateParserTest {
                 "on every(5, event_name): x = x;";
 
 
-        Map<String, String> actions = StateParser.parse(stateLabel);
-        assertEquals("x=x;",
-                actions.get("on every(5,event_name)"));
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals("x=x", actions.get("on every(5,event_name)")[0]);
     }
 }
