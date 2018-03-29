@@ -1,4 +1,4 @@
-import edu.uiowa.chart.state.ActionsVisitor;
+import edu.uiowa.chart.state.StateVisitor;
 import edu.uiowa.chart.state.antlr.*;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
@@ -22,7 +22,7 @@ public class Main {
 
         ParseTree tree =  parser.stateLabel();
         System.out.println(tree.toStringTree(parser));
-        ActionsVisitor visitor = new ActionsVisitor();
+        StateVisitor visitor = new StateVisitor();
         Map<String, String> actions =  visitor.visit(tree);
         System.out.println(actions);
     }

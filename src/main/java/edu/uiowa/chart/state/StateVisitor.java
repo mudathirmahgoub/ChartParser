@@ -6,7 +6,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 import java.util.HashMap;
 
 
-public class ActionsVisitor extends StateLabelBaseVisitor<HashMap<String, String>>
+public class StateVisitor extends StateLabelBaseVisitor<HashMap<String, String>>
 {
     private HashMap<String, String> actions = new HashMap<>();
 

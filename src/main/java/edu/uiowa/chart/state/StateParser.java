@@ -8,7 +8,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.util.HashMap;
 
-public class StateActionParser
+public class StateParser
 {
     public static HashMap<String, String> parse(String stateLabel)
     {
@@ -18,7 +18,7 @@ public class StateActionParser
         StateLabelParser parser = new StateLabelParser(tokenStream);
 
         ParseTree tree =  parser.stateLabel();
-        ActionsVisitor visitor = new ActionsVisitor();
+        StateVisitor visitor = new StateVisitor();
         HashMap<String, String> actions =  visitor.visit(tree);
 
         return actions;
