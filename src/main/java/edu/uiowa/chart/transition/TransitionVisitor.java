@@ -1,9 +1,6 @@
 package edu.uiowa.chart.transition;
 import edu.uiowa.chart.transition.antlr.TransitionLabelBaseVisitor;
 import edu.uiowa.chart.transition.antlr.TransitionLabelParser;
-import java.util.Arrays;
-import java.util.List;
-
 
 public class TransitionVisitor extends TransitionLabelBaseVisitor<Transition>
 {
@@ -30,16 +27,16 @@ public class TransitionVisitor extends TransitionLabelBaseVisitor<Transition>
     }
 
     @Override
-    public Transition visitConditionAction(TransitionLabelParser.ConditionActionContext ctx) {
-        List<String> actions = Arrays.asList(ctx.getText().split("(;|\n)"));
-        this.transition.conditionActions.addAll(actions);
+    public Transition visitConditionAction(TransitionLabelParser.ConditionActionContext ctx)
+    {
+        this.transition.conditionActions = ctx.getText().split("(;|\n)");
         return this.transition;
     }
 
     @Override
-    public Transition visitTransitionAction(TransitionLabelParser.TransitionActionContext ctx) {
-        List<String> actions = Arrays.asList(ctx.getText().split("(;|\n)"));
-        this.transition.conditionActions.addAll(actions);
+    public Transition visitTransitionAction(TransitionLabelParser.TransitionActionContext ctx)
+    {
+        this.transition.conditionActions = ctx.getText().split("(;|\n)");
         return this.transition;
     }
 }
