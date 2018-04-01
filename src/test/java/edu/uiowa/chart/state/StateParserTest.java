@@ -10,6 +10,16 @@ import static org.junit.jupiter.api.Assertions.*;
 class StateParserTest {
 
     @Test
+    void parseState()
+    {
+        String stateLabel = "increasing";
+
+        Map<String, String []> actions = StateParser.parse(stateLabel);
+        assertEquals(0, actions.size());
+    }
+
+
+    @Test
     void parseEntry()
     {
         String stateLabel = "increasing\n" +

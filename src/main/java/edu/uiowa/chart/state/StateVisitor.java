@@ -15,6 +15,12 @@ public class StateVisitor extends StateLabelBaseVisitor<HashMap<String, List<Str
     private HashMap<String, List<String>> actions = new HashMap<>();
 
     @Override
+    public HashMap<String, List<String>> visitStateLabel(StateLabelParser.StateLabelContext ctx) {
+         super.visitStateLabel(ctx);
+         return this.actions;
+    }
+
+    @Override
     public HashMap<String, List<String>> visitAction(StateLabelParser.ActionContext ctx)
     {
         if(ctx.children.size() > 0)
