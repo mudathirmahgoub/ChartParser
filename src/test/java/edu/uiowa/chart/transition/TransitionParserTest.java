@@ -15,6 +15,14 @@ class TransitionParserTest {
     }
 
     @Test
+    void parseConditionBoolean()
+    {
+        String transitionLabel = "[p]";
+        Transition transition = TransitionParser.parse(transitionLabel);
+        assertEquals("p", transition.condition);
+    }
+
+    @Test
     void parseConditionAction()
     {
         String transitionLabel = "[x<0] {x =1;}";
