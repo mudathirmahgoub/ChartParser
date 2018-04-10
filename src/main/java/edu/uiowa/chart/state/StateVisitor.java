@@ -45,28 +45,9 @@ public class StateVisitor extends StateLabelBaseVisitor<StateAction>
     {
         if(ctx.children.size() > 0)
         {
-            ParseTree child = ctx.children.get(0);
-            // if it is a bind action
-            if(child instanceof TerminalNode &&
-                (((TerminalNode) child).getSymbol().getType() == StateLabelLexer.Bind))
+            for (StateLabelParser.ActionTypeContext actionType : ctx.actionType())
             {
-                // skip tokens 'bind' and ':' and get the list of identifiers
-                for (int i = 2 ; i < ctx.getChildCount(); i++)
-                {
-                    ParseTree bindChild = ctx.getChild(i);
-                    if(bindChild instanceof TerminalNode &&
-                            (((TerminalNode) bindChild).getSymbol().getType() == StateLabelLexer.Identifier))
-                    {
-                        this.bind.add(ctx.getChild(i).getText());
-                    }
-                }
-            }
-            else // action type
-            {
-                for (StateLabelParser.ActionTypeContext actionType : ctx.actionType())
-                {
-                    addAction(actionType, ctx.actionBody().getText());
-                }
+                addAction(actionType, ctx.actionBody().getText());
             }
         }
         return stateAction;
@@ -89,6 +70,8 @@ public class StateVisitor extends StateLabelBaseVisitor<StateAction>
                     case StateLabelLexer.During: {this.during.add(actions);} break;
 
                     case StateLabelLexer.Exit: {this.exit.add(actions);} break;
+
+                    case StateLabelLexer.Bind: {this.bind.add(actions);} break;
 
                     case StateLabelLexer.On:
                     {

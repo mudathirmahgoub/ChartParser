@@ -164,10 +164,7 @@ class StateActionParserTest {
                 "bind: name1, name2; name3\n name4";
 
         StateAction stateAction = StateParser.parse(stateLabel);
-        assertEquals("name1", stateAction.bind[0]);
-        assertEquals("name2", stateAction.bind[1]);
-        assertEquals("name3", stateAction.bind[2]);
-        assertEquals("name4", stateAction.bind[3]);
+        assertEquals("name1,name2;name3\nname4", stateAction.bind[0]);
     }
 
     @Test
@@ -250,7 +247,7 @@ class StateActionParserTest {
         assertEquals("x=x;\n", stateAction.entry[0]);
         assertEquals("x=x;\n", stateAction.during[0]);
         assertEquals("x=x;\n", stateAction.exit[0]);
-        assertEquals("name\n", stateAction.bind[0]);
+        assertEquals("name;\n", stateAction.bind[0]);
 
         assertEquals(0, stateAction.on[0].n);
         assertEquals("name", stateAction.on[0].eventName);
