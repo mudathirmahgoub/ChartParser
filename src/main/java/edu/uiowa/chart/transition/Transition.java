@@ -1,8 +1,5 @@
 package edu.uiowa.chart.transition;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Transition
 {
     public String eventOrMessage = "";

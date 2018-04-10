@@ -6,12 +6,12 @@ stateLabel : Identifier '\r'? '\n'* actions?;
 
 actions : (action)+ ;
 
-action : actionType (',' actionType)*  ':'  actionBody
-         | Bind  ':' Identifier? (',' Identifier)* ;
+action : actionType (',' actionType)*  ':'  actionBody;
 
 actionType: Entry
             | During
             | Exit
+            | Bind
             | On Identifier
             | On After '(' Number ',' Identifier ')'
             | On Before '(' Number ',' Identifier ')'

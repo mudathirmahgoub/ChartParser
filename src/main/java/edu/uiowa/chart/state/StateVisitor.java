@@ -3,25 +3,45 @@ import edu.uiowa.chart.state.antlr.*;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNode;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 
-public class StateVisitor extends StateLabelBaseVisitor<HashMap<String, List<String>>>
+public class StateVisitor extends StateLabelBaseVisitor<StateAction>
 {
-    private HashMap<String, List<String>> actions = new HashMap<>();
+    private StateAction stateAction = new StateAction();
+
+    private List<String> entry  = new ArrayList<>();
+    private List<String> during = new ArrayList<>();
+    private List<String> exit   = new ArrayList<>();
+    private List<String> bind   = new ArrayList<>();
+    private List<OnAction> on       = new ArrayList<>();
+    private List<OnAction> onAfter  = new ArrayList<>();
+    private List<OnAction> onBefore = new ArrayList<>();
+    private List<OnAction> onAt     = new ArrayList<>();
+    private List<OnAction> onEvery  = new ArrayList<>();
 
     @Override
-    public HashMap<String, List<String>> visitStateLabel(StateLabelParser.StateLabelContext ctx) {
-         super.visitStateLabel(ctx);
-         return this.actions;
+    public StateAction visitStateLabel(StateLabelParser.StateLabelContext ctx)
+    {
+        super.visitStateLabel(ctx);
+
+        // Matlab doesn't recognize lists. So we need to convert lists to arrays
+        stateAction.entry = this.entry.toArray(new String[0]);
+        stateAction.during = this.during.toArray(new String[0]);
+        stateAction.exit = this.exit.toArray(new String[0]);
+        stateAction.bind = this.bind.toArray(new String[0]);
+        stateAction.on = this.on.toArray(new OnAction[0]);
+        stateAction.onAfter = this.onAfter.toArray(new OnAction[0]);
+        stateAction.onBefore = this.onBefore.toArray(new OnAction[0]);
+        stateAction.onAt = this.onAt.toArray(new OnAction[0]);
+        stateAction.onEvery = this.onEvery.toArray(new OnAction[0]);
+
+        return this.stateAction;
     }
 
     @Override
-    public HashMap<String, List<String>> visitAction(StateLabelParser.ActionContext ctx)
+    public StateAction visitAction(StateLabelParser.ActionContext ctx)
     {
         if(ctx.children.size() > 0)
         {
@@ -30,71 +50,81 @@ public class StateVisitor extends StateLabelBaseVisitor<HashMap<String, List<Str
             if(child instanceof TerminalNode &&
                 (((TerminalNode) child).getSymbol().getType() == StateLabelLexer.Bind))
             {
-                StringBuilder builder = new StringBuilder();
                 // skip tokens 'bind' and ':' and get the list of identifiers
                 for (int i = 2 ; i < ctx.getChildCount(); i++)
                 {
-                    builder.append(ctx.getChild(i).getText());
-                }
-
-                List<String> list = new ArrayList<>();
-                list.addAll(Arrays.asList(builder.toString().split(",")));
-
-                if (actions.containsKey("bind"))
-                {
-                    actions.get("bind").addAll(list);
-                }
-                else
-                {
-                    actions.put("bind", list);
+                    ParseTree bindChild = ctx.getChild(i);
+                    if(bindChild instanceof TerminalNode &&
+                            (((TerminalNode) bindChild).getSymbol().getType() == StateLabelLexer.Identifier))
+                    {
+                        this.bind.add(ctx.getChild(i).getText());
+                    }
                 }
             }
             else // action type
             {
-                for (StateLabelParser.ActionTypeContext actionType : ctx.actionType()) {
-                    String key = getKey(actionType);
-
-                    List<String> list = new ArrayList<>();
-                    list.addAll(Arrays.asList(ctx.actionBody().getText().split("(;|\n)")));
-
-                    if (actions.containsKey(key))
-                    {
-                        actions.get(key).addAll(list);
-                    }
-                    else
-                    {
-                        actions.put(key, list);
-                    }
+                for (StateLabelParser.ActionTypeContext actionType : ctx.actionType())
+                {
+                    addAction(actionType, ctx.actionBody().getText());
                 }
             }
         }
-        return actions;
+        return stateAction;
     }
 
 
-    private String getKey(StateLabelParser.ActionTypeContext ctx) {
-        // add the action to the map
+    private void addAction(StateLabelParser.ActionTypeContext ctx, String actions)
+    {
         if ( ctx.getChildCount() > 0 )
         {
-            ParseTree child = ctx.getChild(0);
+            ParseTree firstChild = ctx.getChild(0);
 
-            if (child instanceof TerminalNode)
+            if (firstChild instanceof TerminalNode)
             {
-                Token token = ((TerminalNode) child).getSymbol();
-                switch (token.getType())
+                Token firstToken = ((TerminalNode) firstChild).getSymbol();
+                switch (firstToken.getType())
                 {
-                    case StateLabelLexer.Entry: return "entry";
-                    case StateLabelLexer.During: return "during";
-                    case StateLabelLexer.Exit: return "exit";
+                    case StateLabelLexer.Entry: {this.entry.add(actions);} break;
+
+                    case StateLabelLexer.During: {this.during.add(actions);} break;
+
+                    case StateLabelLexer.Exit: {this.exit.add(actions);} break;
+
                     case StateLabelLexer.On:
                     {
-                        StringBuilder builder = new StringBuilder();
-                        builder.append("on ");
-                        for (int i = 1 ; i < ctx.getChildCount(); i++)
+                        if ( ctx.getChildCount() > 1 )
                         {
-                            builder.append(ctx.getChild(i).getText());
+                            ParseTree secondChild = ctx.getChild(1);
+                            if (firstChild instanceof TerminalNode)
+                            {
+                                Token secondToken = ((TerminalNode) secondChild).getSymbol();
+                                switch (secondToken.getType())
+                                {
+                                    case StateLabelLexer.Identifier:
+                                    {
+                                            this.on.add(new OnAction(0, secondToken.getText(), actions));
+                                    } break;
+
+                                    case StateLabelLexer.After:
+                                    {
+                                        this.onAfter.add(getOnAction(ctx, actions));
+                                    } break;
+                                    case StateLabelLexer.Before:
+                                    {
+                                        this.onBefore.add(getOnAction(ctx, actions));
+                                    } break;
+                                    case StateLabelLexer.At:
+                                    {
+                                        this.onAt.add(getOnAction(ctx, actions));
+                                    } break;
+
+                                    case StateLabelLexer.Every:
+                                    {
+                                        this.onEvery.add(getOnAction(ctx, actions));
+                                    } break;
+                                }
+                            }
                         }
-                        return builder.toString();
                     }
                 }
             }
@@ -103,6 +133,16 @@ public class StateVisitor extends StateLabelBaseVisitor<HashMap<String, List<Str
                 System.out.println("Expected action type here: " + ctx.getText());
             }
         }
-        return "";
+    }
+
+    private OnAction getOnAction(StateLabelParser.ActionTypeContext ctx,String actions)
+    {
+        // the index of n is 3
+        double n = Double.parseDouble(ctx.getChild(3).getText());
+
+        // the index of eventName is 5
+        String eventName = ctx.getChild(5).getText();
+
+        return new OnAction(n, eventName, actions);
     }
 }
