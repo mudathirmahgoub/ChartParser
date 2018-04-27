@@ -29,14 +29,14 @@ public class TransitionVisitor extends TransitionLabelBaseVisitor<Transition>
     @Override
     public Transition visitConditionAction(TransitionLabelParser.ConditionActionContext ctx)
     {
-        this.transition.conditionActions = ctx.getText().split("(;|\n)");
+        this.transition.conditionAction = ctx.getText();
         return this.transition;
     }
 
     @Override
     public Transition visitTransitionAction(TransitionLabelParser.TransitionActionContext ctx)
     {
-        this.transition.conditionActions = ctx.getText().split("(;|\n)");
+        this.transition.transitionAction = ctx.getText();
         return this.transition;
     }
 }

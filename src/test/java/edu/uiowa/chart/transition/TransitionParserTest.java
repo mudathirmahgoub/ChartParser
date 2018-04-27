@@ -23,21 +23,30 @@ class TransitionParserTest {
     }
 
     @Test
-    void parseConditionAction()
+    void parseConditionAction1()
     {
         String transitionLabel = "[x<0] {x =1;}";
         Transition transition = TransitionParser.parse(transitionLabel);
         assertEquals("x<0", transition.condition);
-        assertEquals("x=1", transition.conditionActions[0]);
+        assertEquals("x=1;", transition.conditionAction);
     }
 
     @Test
-    void parseConditionActions()
+    void parseConditionAction2()
     {
         String transitionLabel = "[x<0] {x =1; y = 2;}";
         Transition transition = TransitionParser.parse(transitionLabel);
         assertEquals("x<0", transition.condition);
-        assertEquals("x=1", transition.conditionActions[0]);
-        assertEquals("y=2", transition.conditionActions[1]);
+        assertEquals("x=1;y=2;", transition.conditionAction);
+    }
+
+    @Test
+    void parseConditionActionTransitionAction()
+    {
+        String transitionLabel = "[x<0] {x =1; y = 2;}/z=1;";
+        Transition transition = TransitionParser.parse(transitionLabel);
+        assertEquals("x<0", transition.condition);
+        assertEquals("x=1;y=2;", transition.conditionAction);
+        assertEquals("z=1;", transition.transitionAction);
     }
 }
