@@ -93,11 +93,17 @@ public class TransitionLabelParser extends Parser {
 			return getRuleContext(ConditionContext.class,0);
 		}
 		public TerminalNode RightSquareBracket() { return getToken(TransitionLabelParser.RightSquareBracket, 0); }
-		public TerminalNode LeftCurlyBracket() { return getToken(TransitionLabelParser.LeftCurlyBracket, 0); }
+		public List<TerminalNode> LeftCurlyBracket() { return getTokens(TransitionLabelParser.LeftCurlyBracket); }
+		public TerminalNode LeftCurlyBracket(int i) {
+			return getToken(TransitionLabelParser.LeftCurlyBracket, i);
+		}
 		public ConditionActionContext conditionAction() {
 			return getRuleContext(ConditionActionContext.class,0);
 		}
-		public TerminalNode RightCurlyBracket() { return getToken(TransitionLabelParser.RightCurlyBracket, 0); }
+		public List<TerminalNode> RightCurlyBracket() { return getTokens(TransitionLabelParser.RightCurlyBracket); }
+		public TerminalNode RightCurlyBracket(int i) {
+			return getToken(TransitionLabelParser.RightCurlyBracket, i);
+		}
 		public TerminalNode Slash() { return getToken(TransitionLabelParser.Slash, 0); }
 		public TransitionActionContext transitionAction() {
 			return getRuleContext(TransitionActionContext.class,0);
@@ -166,7 +172,7 @@ public class TransitionLabelParser extends Parser {
 				}
 			}
 
-			setState(27);
+			setState(30);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==Slash) {
@@ -174,7 +180,11 @@ public class TransitionLabelParser extends Parser {
 				setState(25);
 				match(Slash);
 				setState(26);
+				match(LeftCurlyBracket);
+				setState(27);
 				transitionAction();
+				setState(28);
+				match(RightCurlyBracket);
 				}
 			}
 
@@ -218,7 +228,7 @@ public class TransitionLabelParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(29);
+			setState(32);
 			match(Identifier);
 			}
 		}
@@ -260,19 +270,19 @@ public class TransitionLabelParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(34);
+			setState(37);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
 			while ( _alt!=1 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1+1 ) {
 					{
 					{
-					setState(31);
+					setState(34);
 					matchWildcard();
 					}
 					} 
 				}
-				setState(36);
+				setState(39);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
 			}
@@ -316,19 +326,19 @@ public class TransitionLabelParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(40);
+			setState(43);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 			while ( _alt!=1 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1+1 ) {
 					{
 					{
-					setState(37);
+					setState(40);
 					matchWildcard();
 					}
 					} 
 				}
-				setState(42);
+				setState(45);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 			}
@@ -372,19 +382,19 @@ public class TransitionLabelParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(46);
+			setState(49);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,6,_ctx);
 			while ( _alt!=1 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1+1 ) {
 					{
 					{
-					setState(43);
+					setState(46);
 					matchWildcard();
 					}
 					} 
 				}
-				setState(48);
+				setState(51);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,6,_ctx);
 			}
@@ -402,20 +412,21 @@ public class TransitionLabelParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\r\64\4\2\t\2\4\3"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\r\67\4\2\t\2\4\3"+
 		"\t\3\4\4\t\4\4\5\t\5\4\6\t\6\3\2\5\2\16\n\2\3\2\3\2\3\2\3\2\5\2\24\n\2"+
-		"\3\2\3\2\3\2\3\2\5\2\32\n\2\3\2\3\2\5\2\36\n\2\3\3\3\3\3\4\7\4#\n\4\f"+
-		"\4\16\4&\13\4\3\5\7\5)\n\5\f\5\16\5,\13\5\3\6\7\6/\n\6\f\6\16\6\62\13"+
-		"\6\3\6\5$*\60\2\7\2\4\6\b\n\2\2\2\65\2\r\3\2\2\2\4\37\3\2\2\2\6$\3\2\2"+
-		"\2\b*\3\2\2\2\n\60\3\2\2\2\f\16\5\4\3\2\r\f\3\2\2\2\r\16\3\2\2\2\16\23"+
-		"\3\2\2\2\17\20\7\3\2\2\20\21\5\6\4\2\21\22\7\4\2\2\22\24\3\2\2\2\23\17"+
-		"\3\2\2\2\23\24\3\2\2\2\24\31\3\2\2\2\25\26\7\5\2\2\26\27\5\b\5\2\27\30"+
-		"\7\6\2\2\30\32\3\2\2\2\31\25\3\2\2\2\31\32\3\2\2\2\32\35\3\2\2\2\33\34"+
-		"\7\7\2\2\34\36\5\n\6\2\35\33\3\2\2\2\35\36\3\2\2\2\36\3\3\2\2\2\37 \7"+
-		"\b\2\2 \5\3\2\2\2!#\13\2\2\2\"!\3\2\2\2#&\3\2\2\2$%\3\2\2\2$\"\3\2\2\2"+
-		"%\7\3\2\2\2&$\3\2\2\2\')\13\2\2\2(\'\3\2\2\2),\3\2\2\2*+\3\2\2\2*(\3\2"+
-		"\2\2+\t\3\2\2\2,*\3\2\2\2-/\13\2\2\2.-\3\2\2\2/\62\3\2\2\2\60\61\3\2\2"+
-		"\2\60.\3\2\2\2\61\13\3\2\2\2\62\60\3\2\2\2\t\r\23\31\35$*\60";
+		"\3\2\3\2\3\2\3\2\5\2\32\n\2\3\2\3\2\3\2\3\2\3\2\5\2!\n\2\3\3\3\3\3\4\7"+
+		"\4&\n\4\f\4\16\4)\13\4\3\5\7\5,\n\5\f\5\16\5/\13\5\3\6\7\6\62\n\6\f\6"+
+		"\16\6\65\13\6\3\6\5\'-\63\2\7\2\4\6\b\n\2\2\28\2\r\3\2\2\2\4\"\3\2\2\2"+
+		"\6\'\3\2\2\2\b-\3\2\2\2\n\63\3\2\2\2\f\16\5\4\3\2\r\f\3\2\2\2\r\16\3\2"+
+		"\2\2\16\23\3\2\2\2\17\20\7\3\2\2\20\21\5\6\4\2\21\22\7\4\2\2\22\24\3\2"+
+		"\2\2\23\17\3\2\2\2\23\24\3\2\2\2\24\31\3\2\2\2\25\26\7\5\2\2\26\27\5\b"+
+		"\5\2\27\30\7\6\2\2\30\32\3\2\2\2\31\25\3\2\2\2\31\32\3\2\2\2\32 \3\2\2"+
+		"\2\33\34\7\7\2\2\34\35\7\5\2\2\35\36\5\n\6\2\36\37\7\6\2\2\37!\3\2\2\2"+
+		" \33\3\2\2\2 !\3\2\2\2!\3\3\2\2\2\"#\7\b\2\2#\5\3\2\2\2$&\13\2\2\2%$\3"+
+		"\2\2\2&)\3\2\2\2\'(\3\2\2\2\'%\3\2\2\2(\7\3\2\2\2)\'\3\2\2\2*,\13\2\2"+
+		"\2+*\3\2\2\2,/\3\2\2\2-.\3\2\2\2-+\3\2\2\2.\t\3\2\2\2/-\3\2\2\2\60\62"+
+		"\13\2\2\2\61\60\3\2\2\2\62\65\3\2\2\2\63\64\3\2\2\2\63\61\3\2\2\2\64\13"+
+		"\3\2\2\2\65\63\3\2\2\2\t\r\23\31 \'-\63";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

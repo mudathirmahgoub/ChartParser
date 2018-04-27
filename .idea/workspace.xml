@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bc9dd1e-f28a-491f-9864-7f9195233604" name="Default" comment="Refactoring">
+    <list default="true" id="3bc9dd1e-f28a-491f-9864-7f9195233604" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/Transition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/Transition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/TransitionVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/TransitionVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/antlr/TransitionLabel.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/antlr/TransitionLabel.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/antlr/TransitionLabelParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/antlr/TransitionLabelParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/uiowa/chart/transition/TransitionParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/uiowa/chart/transition/TransitionParserTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -60,8 +60,8 @@
       <file leaf-file-name="TransitionParserTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/uiowa/chart/transition/TransitionParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+            <state relative-caret-position="370">
+              <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -78,8 +78,8 @@
       <file leaf-file-name="TransitionLabel.g4" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/antlr/TransitionLabel.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            <state relative-caret-position="132">
+              <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -153,7 +153,6 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/StateActionParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/antlr/test.txt" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/TransitionParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/antlr/TransitionLabel.g4" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/state/StateParser.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/uiowa/chart/state/StateParserTest.java" />
@@ -165,6 +164,7 @@
         <option value="$PROJECT_DIR$/src/test/java/edu/uiowa/chart/state/StateActionParserTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/Transition.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/TransitionVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/antlr/TransitionLabel.g4" />
         <option value="$PROJECT_DIR$/src/test/java/edu/uiowa/chart/transition/TransitionParserTest.java" />
       </list>
     </option>
@@ -546,7 +546,7 @@
       <workItem from="1522546869626" duration="4045000" />
       <workItem from="1523341065963" duration="17729000" />
       <workItem from="1524377296499" duration="7000" />
-      <workItem from="1524855288281" duration="394000" />
+      <workItem from="1524855288281" duration="1396000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring">
       <created>1521926333671</created>
@@ -632,28 +632,17 @@
       <option name="project" value="LOCAL" />
       <updated>1523361312672</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed transition  actions">
+      <created>1524855903364</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1524855903364</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StateActionParserTest_parseOnAfterBeforeAtEvery - 2018.04.10 at 06h 11m 22s.xml">
-      <configuration name="StateActionParserTest.parseOnAfterBeforeAtEvery" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StateActionParserTest - 2018.04.10 at 06h 11m 42s.xml">
-      <configuration name="StateActionParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StateActionParserTest - 2018.04.10 at 06h 13m 58s.xml">
-      <configuration name="StateActionParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StateActionParserTest - 2018.04.10 at 06h 19m 44s.xml">
-      <configuration name="StateActionParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="edu_uiowa_chart_in_ChartParser - 2018.04.10 at 06h 50m 31s.xml">
-      <configuration name="edu.uiowa.chart in ChartParser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="edu_uiowa_chart_in_ChartParser - 2018.04.10 at 06h 51m 09s.xml">
-      <configuration name="edu.uiowa.chart in ChartParser" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="edu_uiowa_chart_in_ChartParser - 2018.04.10 at 06h 51m 20s.xml">
       <configuration name="edu.uiowa.chart in ChartParser" configurationId="JUnit" />
     </history-entry>
@@ -666,9 +655,27 @@
     <history-entry file="edu_uiowa_chart_in_ChartParser - 2018.04.10 at 06h 53m 21s.xml">
       <configuration name="edu.uiowa.chart in ChartParser" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TransitionParserTest - 2018.04.27 at 14h 01m 44s.xml">
+      <configuration name="TransitionParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransitionParserTest - 2018.04.27 at 14h 02m 12s.xml">
+      <configuration name="TransitionParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransitionParserTest - 2018.04.27 at 14h 02m 57s.xml">
+      <configuration name="TransitionParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransitionParserTest_parseConditionActionTransitionAction - 2018.04.27 at 14h 04m 00s.xml">
+      <configuration name="TransitionParserTest.parseConditionActionTransitionAction" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_ChartParser - 2018.04.27 at 14h 04m 27s.xml">
+      <configuration name="All in ChartParser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_ChartParser - 2018.04.27 at 14h 18m 44s.xml">
+      <configuration name="All in ChartParser" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69462000" />
+    <option name="totallyTimeSpent" value="70464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -677,7 +684,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Tool Output" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32897604" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
@@ -685,7 +692,7 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32897604" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -750,7 +757,8 @@
     <MESSAGE value="Changed state actions to array" />
     <MESSAGE value="Fixed empty actions" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Fixed transition  actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed transition  actions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1105,10 +1113,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/antlr/TransitionLabel.g4">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/TransitionVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="540">
+          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1119,17 +1127,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/TransitionVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/uiowa/chart/transition/antlr/TransitionLabel.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+        <state relative-caret-position="132">
+          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/uiowa/chart/transition/TransitionParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+        <state relative-caret-position="370">
+          <caret line="45" column="61" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
         </state>
       </provider>
     </entry>

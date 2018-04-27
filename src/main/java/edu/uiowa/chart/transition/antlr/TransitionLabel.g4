@@ -5,7 +5,7 @@ grammar TransitionLabel;
 transitionLabel : eventOrMessage?
                     (LeftSquareBracket condition RightSquareBracket)?
                     (LeftCurlyBracket conditionAction RightCurlyBracket)?
-                    (Slash transitionAction)? ;
+                    (Slash LeftCurlyBracket transitionAction RightCurlyBracket)? ;
 
 eventOrMessage : Identifier;
 

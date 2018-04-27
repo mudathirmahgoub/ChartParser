@@ -43,7 +43,7 @@ class TransitionParserTest {
     @Test
     void parseConditionActionTransitionAction()
     {
-        String transitionLabel = "[x<0] {x =1; y = 2;}/z=1;";
+        String transitionLabel = "[x<0] {x =1; y = 2;}/{z=1;}";
         Transition transition = TransitionParser.parse(transitionLabel);
         assertEquals("x<0", transition.condition);
         assertEquals("x=1;y=2;", transition.conditionAction);
